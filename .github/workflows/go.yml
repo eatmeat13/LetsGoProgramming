@@ -5,13 +5,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: 
-      image: anndutova/go-course-main:v1.0.0
+    container:
+      image: anndutova/go-course-tests:v1.0.0
     steps:
       - uses: actions/checkout@v3
 
       - name: move file to test
-        run: mv file.go /test
+        run: mv hw2/cmd/file.go /test
 
       - name: Run test
         working-directory: /test
